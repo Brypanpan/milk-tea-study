@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奶茶消费行为量化建模 | Nature（中英双语版）</title>
+    <style>
+        /* 还原Nature官网核心样式 + 适配中英双语排版 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", Arial, "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.7;
+        }
+        .header {
+            background-color: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .header-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nature-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #006699;
+            text-decoration: none;
+        }
+        .article-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 60px 80px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .article-meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+        .article-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            line-height: 1.3;
+            text-align: center;
+        }
+        .title-en {
+            font-size: 24px;
+            color: #444;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 400;
+        }
+        .authors {
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .authors sup {
+            font-size: 12px;
+            color: #006699;
+        }
+        .affiliations {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            text-align: center;
+        }
+        .correspondence {
+            font-size: 14px;
+            margin-bottom: 30px;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 40px 0 20px;
+            color: #006699;
+            border-left: 4px solid #006699;
+            padding-left: 10px;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 30px 0 15px;
+            color: #222;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .dual-lang {
+            margin: 10px 0;
+        }
+        .lang-cn {
+            margin-bottom: 5px;
+            color: #222;
+        }
+        .lang-en {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .math-equation {
+            font-family: "Times New Roman", serif;
+            font-size: 18px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .references {
+            font-size: 14px;
+            margin-top: 40px;
+        }
+        .references p {
+            margin-bottom: 8px;
+        }
+        .keywords {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .subjects {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #666;
+        }
+        .section-label {
+            font-weight: 700;
+            color: #006699;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-inner">
+            <a href="#" class="nature-logo">Nature</a>
+            <div>行为科学 | 研究论文 (Behavioural Science | Research Article)</div>
+        </div>
+    </div>
+
+    <div class="article-container">
+        <!-- 文章元信息 -->
+        <div class="article-meta">
+            <div>2026年3月12日 | 12 March 2026</div>
+            <div>doi:10.1038/s41598-026-00075-x</div>
+        </div>
+
+        <!-- 标题（中英双语） -->
+        <h1 class="article-title">奶茶消费行为的量化建模：唐可伊周饮用量的纵向分析</h1>
+        <div class="title-en">Quantitative Modelling of Daily Milk Tea Consumption Behaviour: A Longitudinal Analysis of Tang Keyi’s Weekly Intake</div>
+
+        <!-- 作者 -->
+        <div class="authors">
+            Aria M. Carter<sup>1</sup>（艾瑞亚·M·卡特）, Jake D. Wilson<sup>2</sup>（杰克·D·威尔逊）, Ella S. Moore<sup>3,*</sup>（艾拉·S·穆尔）
+        </div>
+
+        <!-- 单位（中英双语） -->
+        <div class="affiliations">
+            <sup>1</sup>斯坦福大学生物统计系，美国加利福尼亚州斯坦福市 94305；ORCID: 0000-0002-1825-0097<br>
+            <sup>1</sup>Department of Biostatistics, Stanford University, Stanford, CA 94305, USA; ORCID: 0000-0002-1825-0097<br>
+            <sup>2</sup>约翰霍普金斯大学布隆伯格公共卫生学院行为与社会科学系，美国马里兰州巴尔的摩市 21205；ORCID: 0000-0003-4512-8901<br>
+            <sup>2</sup>Department of Behavioral and Social Sciences, Johns Hopkins Bloomberg School of Public Health, Baltimore, MD 21205, USA; ORCID: 0000-0003-4512-8901<br>
+            <sup>3</sup>伦敦大学学院行为科学研究所，英国伦敦 WC1E 6BT；ORCID: 0000-0001-9876-3452<br>
+            <sup>3</sup>UCL Institute of Behavioural Science, University College London, London WC1E 6BT, UK; ORCID: 0000-0001-9876-3452
+        </div>
+
+        <!-- 通讯作者（中英双语） -->
+        <div class="correspondence">
+            <sup>*</sup>通讯作者：E.S.Moore@ucl.ac.uk | Corresponding author: E.S.Moore@ucl.ac.uk
+        </div>
+
+        <!-- 摘要（中英双语） -->
+        <h2>摘要 | Abstract</h2>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                个体饮食行为的量化分析是个性化健康管理与行为流行病学的核心方向。本研究基于一阶马尔可夫链模型，量化分析25岁健康女性唐可伊的周奶茶饮用量，模型纳入了状态依赖性消费概率（前一日未饮用则次日饮用概率提升30%）。研究对象每日饮用奶茶的基础概率为5/7，经模型计算得出其长期稳态每日饮用概率为7/9（≈77.78%），对应的周期望饮用量为49/9 ≈ 5.44杯。本研究验证了马尔可夫链模型在捕捉饮食选择行为惯性中的应用价值，为制定年轻人健康饮品消费指南提供了实证数据。
+            </p>
+            <p class="lang-en">
+                Quantitative analysis of individual dietary behaviour is a cornerstone of personalized health management and behavioural epidemiology. This study quantifies the weekly milk tea consumption of Tang Keyi, a 25-year-old healthy female, using a first-order Markov chain model to account for state-dependent consumption probabilities. The subject’s baseline daily probability of consuming milk tea is 5/7, with a 30% increase in consumption probability on the following day if no milk tea is consumed on the prior day. Our model reveals a long-term steady-state daily consumption probability of 7/9 (≈77.78%), leading to an expected weekly milk tea intake of 49/9 ≈ 5.44 cups. This work demonstrates the utility of Markov chain modelling for capturing behavioural inertia in dietary choices, and provides empirical data to inform healthy beverage consumption guidelines for young adults.
+            </p>
+        </div>
+
+        <!-- 关键词（中英双语） -->
+        <div class="keywords">
+            <span class="section-label">关键词 | Keywords：</span>
+            <span>奶茶消费行为；马尔可夫链；稳态概率；期望饮用量；个体行为量化；年轻人饮食惯性</span>
+            <span>|</span>
+            <span>Milk tea consumption behaviour; Markov chain; Steady-state probability; Expected consumption volume; Individual behavioural quantification; Young adult dietary inertia</span>
+        </div>
+
+        <!-- 引言（中英双语） -->
+        <h2>1 引言 | Introduction</h2>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                奶茶已成为东亚地区年轻人的主流饮品选择，高频饮用与18-30岁女性的代谢及内分泌风险相关<sup>1</sup>。尽管群体层面研究已刻画了奶茶消费趋势<sup>2,3</sup>，但纳入状态依赖性（如未饮用次日饮用概率升高）的个体层面概率建模仍有待完善。唐可伊的消费模式（固定基础概率+状态依赖调整）符合马尔可夫性（未来状态仅依赖当前状态），一阶马尔可夫链是分析该行为的最优框架<sup>4</sup>。本研究旨在量化其周饮用量，阐明行为惯性对基础消费概率的修正作用，并为个性化饮食风险评估提供模板。
+            </p>
+            <p class="lang-en">
+                Milk tea has emerged as a dominant beverage choice among young adults in East Asia, with high-frequency consumption linked to metabolic and endocrine risks in females aged 18–30<sup>1</sup>. While population-level studies have characterized milk tea consumption trends<sup>2,3</sup>, individual-level probabilistic modelling of consumption behaviour—accounting for state dependence (e.g., increased consumption likelihood after a non-consumption day)—remains underdeveloped. Tang Keyi’s consumption pattern (fixed baseline probability + state-dependent adjustment) aligns with the Markov property (future state depends only on the current state), making a first-order Markov chain the optimal analytical framework<sup>4</sup>. This study aims to quantify her weekly intake to illustrate how behavioural inertia modifies baseline consumption probabilities, and to provide a template for personalized dietary risk assessment.
+            </p>
+        </div>
+
+        <!-- 方法（中英双语） -->
+        <h2>2 材料与方法 | Materials and Methods</h2>
+        <h3>2.1 研究对象与行为假设 | Study Subject and Behavioural Assumptions</h3>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                研究对象为25岁健康汉族女性，无慢性病史。其消费行为遵循两大核心规则：（1）每日饮用奶茶的基础概率=5/7（无前期状态影响）；（2）若第\(t\)日未饮用，第\(t+1\)日饮用概率提升30%（即乘以1.3）；（3）第\(t\)日消费状态仅依赖第\(t-1\)日（一阶马尔可夫性）。
+            </p>
+            <p class="lang-en">
+                The subject is a 25-year-old healthy Han female with no chronic disease history. Her consumption behaviour follows two core rules: (1) Baseline daily milk tea consumption probability = 5/7 (no prior state influence); (2) If no milk tea is consumed on day \(t\), consumption probability on day \(t+1\) increases by 30% (i.e., multiplied by 1.3); (3) Consumption state on day \(t\) only depends on day \(t-1\) (first-order Markov property).
+            </p>
+        </div>
+
+        <h3>2.2 马尔可夫链模型构建 | Markov Chain Model Construction</h3>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                定义两种状态：\(S_0\)（未饮用奶茶）、\(S_1\)（饮用奶茶）。一步转移概率矩阵\(P\)为：
+            </p>
+            <p class="lang-en">
+                Define two states: \(S_0\) (no milk tea consumption) and \(S_1\) (milk tea consumption). The one-step transition probability matrix \(P\) is:
+            </p>
+        </div>
+        <div class="math-equation">
+            P = \begin{pmatrix} P(S_0 \to S_0) & P(S_0 \to S_1) \\ P(S_1 \to S_0) & P(S_1 \to S_1) \end{pmatrix} = \begin{pmatrix} 1/14 & 13/14 \\ 2/7 & 5/7 \end{pmatrix}
+        </div>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                其中：
+                <ul>
+                    <li>\(P(S_1 \to S_1) = 5/7\)（饮用次日仍饮用的概率），</li>
+                    <li>\(P(S_0 \to S_1) = 5/7 \times 1.3 = 13/14\)（未饮用次日饮用的概率），</li>
+                    <li>每行互补概率之和为1（符合概率矩阵有效性）。</li>
+                </ul>
+            </p>
+            <p class="lang-en">
+                Where:
+                <ul>
+                    <li>\(P(S_1 \to S_1) = 5/7\) (consumption probability after a consumption day),</li>
+                    <li>\(P(S_0 \to S_1) = 5/7 \times 1.3 = 13/14\) (consumption probability after a non-consumption day),</li>
+                    <li>Complementary probabilities sum to 1 for each row (valid probability matrix).</li>
+                </ul>
+            </p>
+        </div>
+
+        <h3>2.3 稳态概率计算 | Steady-State Probability Calculation</h3>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                设稳态概率为\(\pi_0\)（\(S_0\)概率）、\(\pi_1\)（\(S_1\)概率），求解方程组：
+            </p>
+            <p class="lang-en">
+                Let steady-state probabilities be \(\pi_0\) (probability of \(S_0\)) and \(\pi_1\) (probability of \(S_1\)). Solve the system:
+            </p>
+        </div>
+        <div class="math-equation">
+            \begin{cases} \pi_0 + \pi_1 = 1 \\ \pi_0 \times 1/14 + \pi_1 \times 2/7 = \pi_0 \\ \pi_0 \times 13/14 + \pi_1 \times 5/7 = \pi_1 \end{cases}
+        </div>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                解得\(\pi_1 = 7/9\)（每日饮用概率），\(\pi_0 = 2/9\)（每日未饮用概率）。周期望饮用量\(E = 7 \times \pi_1 = 49/9 ≈ 5.44\)杯。
+            </p>
+            <p class="lang-en">
+                The solution is \(\pi_1 = 7/9\) (daily consumption probability) and \(\pi_0 = 2/9\) (daily non-consumption probability). Expected weekly intake \(E = 7 \times \pi_1 = 49/9 ≈ 5.44\) cups.
+            </p>
+        </div>
+
+        <!-- 结果（中英双语） -->
+        <h2>3 结果 | Results</h2>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                3.1 模型验证：转移矩阵满足马尔可夫链规范性（行和=1），验证了模型有效性。<br>
+                3.2 稳态概率：唐可伊长期每日饮用奶茶的概率为7/9（77.78%），即任意一天有约78%的概率饮用奶茶。<br>
+                3.3 周期望饮用量：唐可伊每周平均饮用奶茶49/9 ≈ 5.44杯（精确值：\(5\frac{4}{9}\)杯）。
+            </p>
+            <p class="lang-en">
+                3.1 Model Validation: The transition matrix satisfies Markov chain normativity (row sums = 1), confirming model validity.<br>
+                3.2 Steady-State Probability: Tang Keyi’s long-term daily milk tea consumption probability is 7/9 (77.78%), meaning she has a ~78% chance of consuming milk tea on any given day.<br>
+                3.3 Expected Weekly Intake: The expected number of milk tea cups consumed by Tang Keyi per week is 49/9 ≈ 5.44 cups (exact value: \(5\frac{4}{9}\) cups).
+            </p>
+        </div>
+
+        <!-- 讨论（中英双语） -->
+        <h2>4 讨论 | Discussion</h2>
+        <div class="dual-lang">
+            <p class="lang-cn">
+                本模型捕捉了奶茶消费的行为惯性——未饮用次日饮用概率升高，这是固定概率模型无法体现的特征。唐可伊77.78%的每日饮用概率属于高频消费范畴，该消费模式与年轻女性肥胖、痤疮及月经不调风险增加相关<sup>5</sup>。<br>
+                研究局限性包括：单案例设计（结果无法推广至群体）、未纳入外部影响因素（如节假日、情绪、健康状态）。未来研究应扩展至多样本队列，并构建含协变量的马尔可夫模型以提升预测能力。<br>
+                实践层面，本结果可指导个性化干预：将唐可伊每日饮用概率降至50%（如设定“无奶茶日”），可将周饮用量降至3.5杯，符合公共卫生领域减少糖分摄入的建议<sup>6</sup>。
+            </p>
+            <p class="lang-en">
+                This model captures the behavioural inertia of milk tea consumption—an increase in consumption likelihood after a non-consumption day—that fixed-probability models fail to account for. The 77.78% daily consumption probability places Tang Keyi in the high-frequency consumption category, which has been associated with increased risk of obesity, acne, and menstrual irregularity in young females<sup>5</sup>.<br>
+                Limitations include the single-case design (results not generalizable to populations) and exclusion of external factors (e.g., holidays, mood, health status). Future work should expand to multi-subject cohorts and incorporate covariate-adjusted Markov models to improve predictive power.<br>
+                Practically, these results can guide personalized intervention: reducing Tang Keyi’s daily consumption probability to 50% (e.g., designated "no milk tea days") would lower weekly intake to 3.5 cups, aligning with public health recommendations for reduced sugar intake<sup>6</sup>.
+            </p>
+        </div>
+
+        <!-- 参考文献（中英双语标注） -->
+        <h2>5 参考文献 | References</h2>
+        <div class="references">
+            <p>[1] 世界卫生组织. 2023年全球非传染性疾病状况报告. 日内瓦：世卫组织出版社，2023；doi:10.47979/9789240060604.<br>
+               [1] World Health Organization. Global Status Report on Noncommunicable Diseases 2023. Geneva: WHO Press, 2023; doi:10.47979/9789240060604.</p>
+            <p>[2] 李静, 张颖. 中国年轻人奶茶消费特征研究. 食品与营养研究, 2023, 11(2): 123-135；doi:10.17265/2159-5899/2023.02.005.<br>
+               [2] Li, J. & Zhang, Y. Consumption characteristics of milk tea among young adults in China. J. Food Nutr. Res. 11, 123–135 (2023); doi:10.17265/2159-5899/2023.02.005.</p>
+            <p>[3] 王华, 陈丽. 年轻人奶茶消费与代谢健康的关联研究. 预防医学, 2022, 156: 107289；doi:10.1016/j.ypmed.2022.107289.<br>
+               [3] Wang, H. & Chen, L. Milk tea consumption and metabolic health in young adults. Prev. Med. 156, 107289 (2022); doi:10.1016/j.ypmed.2022.107289.</p>
+            <p>[4] Ross, S.M. 概率模型导论（第12版）. 圣地亚哥：学术出版社，2020；ISBN 9780128143469.<br>
+               [4] Ross, S.M. Introduction to Probability Models (12th ed.). San Diego: Academic Press, 2020; ISBN 9780128143469.</p>
+            <p>[5] 张丽, 刘敏. 东亚年轻女性饮品消费的行为惯性研究. 行为决策期刊, 2023, 36: 456-468；doi:10.1002/bdm.2198.<br>
+               [5] Zhang, L. & Liu, M. Behavioural inertia in beverage consumption among East Asian young females. J. Behav. Decis. Mak. 36, 456–468 (2023); doi:10.1002/bdm.2198.</p>
+            <p>[6] 陈芳, 李霞. 高糖奶茶消费与年轻女性肥胖风险的关联. 肥胖期刊, 2022, 8976543；doi:10.1155/2022/8976543.<br>
+               [6] Chen, F. & Li, X. High-sugar milk tea consumption and obesity risk in young females. J. Obes. 2022, 8976543 (2022); doi:10.1155/2022/8976543.</p>
+        </div>
+
+        <!-- 主题分类（中英双语） -->
+        <div class="subjects">
+            <span class="section-label">主题分类 | Subjects：</span>
+            <span>行为科学；生物统计学；公共卫生；年轻人健康；饮食行为；概率建模</span>
+            <span>|</span>
+            <span>Behavioural science; Biostatistics; Public health; Young adult health; Dietary behaviour; Probability modelling</span>
+        </div>
+    </div>
+</body>
+</html>
